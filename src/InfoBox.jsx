@@ -5,9 +5,13 @@ import Typography from '@mui/material/Typography';
 import "./InfoBox.css";
 export default function InfoBox({info}){
 const init_url = "https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=800&q=80"; 
-const hot_url = "https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=800&q=80"; 
-const cold_url = "https://images.unsplash.com/photo-1608889175123-8f5e6a0c9c9e?auto=format&fit=crop&w=800&q=80"; 
-const rain_url = "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80"; 
+const hot_url = "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?auto=format&fit=crop&w=800&q=80"; 
+
+// Cold / Snowy day image
+const cold_url = "https://images.unsplash.com/photo-1491002052546-bf38f186af56?auto=format&fit=crop&w=800&q=80"; 
+
+// Rainy day image
+const rain_url = "https://images.unsplash.com/photo-1542801205-5240aa78e9d4?auto=format&fit=crop&w=800&q=80"; 
 
 
        
@@ -18,7 +22,7 @@ const rain_url = "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?a
              <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image={info.humidity > 80 ? rain_url:info.temp >20 ? hot_url : cold_url}
+        image={info.humidity > 80 ? rain_url:info.temp >15 ? hot_url : cold_url}
         title="green iguana"
       />
       <CardContent>
